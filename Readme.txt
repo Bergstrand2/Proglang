@@ -1,7 +1,0 @@
-1.	Javascript er verdens mest populære progammeringsspråk. Det kan bli satt inn i HTML-sider og kan bidra til å gjøre websider mer interaktive. Javascript kjører på klientens datamaskin og krever ikke konstante nedlastninger fra serveren. Javascript er ofte brukt til å lage polls og quiz.
-
-2.	Class og ID er to forskjellige måter å identifisere noe på en webside. Sistnevnte er helt unik på siden og referer kun til et element. Class derimot referer til en klasse med potensielt flere elementer på siden, alt etter hva skaperen vil. Dette brukes altså til å gi elementene forskjellige egenskaper.
-
-3.	Wikipedia har løst dette ved å kategorisere dem alfabetisk, og delt dem opp i tre rader. I tillegg kan du enkelt trykke deg inn på en bokstav og skreddersy måten de er kategorisert, dvs heller rangere dem kronologisk enn alfabetisk for eksempel.
-
-4.	Div-taggen er et blokk-element som brukes til å holde og posisjonere andre elementer. Span-taggen derimot er et «inline»element som brukes til å gi tekst forskjellig egenskaper. Span blir på mange måter en mindre enhet enn div.
