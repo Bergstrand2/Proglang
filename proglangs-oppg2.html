@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<!--
+LAB1
+Navn: Gunnar Bergstrand
+Jeg samarbeidet med: ...
+Tiden jeg har brukt på oppgaven: ...
+-->
+
+<html>
+<head>
+ <meta charset="utf-8">
+ <title>Programmeringsspråk (versjon 0.0.1)</title>
+ <script>
+function favBrowser()
+{
+var mylist=document.getElementById("myList");
+document.getElementById("favorite").value=mylist.options[mylist.selectedIndex].text;
+}
+</script>
+ <script type="text/javascript" src="jquery-1.10.2.min.js"></script>
+ <link rel="stylesheet" href="proglangs-oppgave1.css" type="text/css" media="all" />
+ 
+</head>
+<body>
+<Form>
+Programmeringsspråk:
+<hr>
+<select id="myList" onchange="favBrowser()">
+<option>Velg:</option>
+<option>ActionScript</li>
+<option>AppleScript</li>
+<option>Asp</li>
+<option>BASIC</li>
+<option>C</li>
+<option>C++</li>
+<option>Clojure</li>
+<option>COBOL</li>
+<option>ColdFusion</li>
+<option>Erlang</li>
+<option>Fortran</li>
+<option>Groovy</li>
+<option>Haskell</li>
+<option>Java</li>
+<option>JavaScript</li>
+<option>Lisp</li>
+<option>Perl</li>
+<option>PHP</li>
+<option>Ruby</li>
+<option>Scala</li>
+<option>Scheme</li>
+</select>
+<p>Du har valgt følgende programmeringsspråk: <input type="text" id="favorite" size="18"></p>
+</form>
+<br>
+</body>
+</html>
