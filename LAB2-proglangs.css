@@ -1,0 +1,41 @@
+body {
+
+  padding-left: 11em;
+  /*Her defineres hvor midtstilt teksten skal være*/
+  font-family: Georgia, "Times New Roman",
+        Times, serif;
+		/*Her defineres skrifttypen*/
+  color: purple;
+  background-color: #d8da3d }
+  /*Dette bestemmer fargen på skriften og bakgrunnen*/
+ul.navbar {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 3em;
+  left: 1em;
+  width: 9em }
+  /*Her defineres stilen og lokalisjonen til navigasjonsbaren*/
+h1 {
+  font-family: Helvetica, Geneva, Arial,
+        SunSans-Regular, sans-serif }
+		/* Dette er skrifttypen til h1*/
+ul.navbar li {
+  background: white;
+  margin: 0.5em 0;
+  padding: 0.3em;
+  border-right: 1em solid black }
+  /* Dette er spesifikasjonene til navigasjonsbaren, bakgrunnsfarge, margin mellom valgene, hvor lange de skal være, samt den svarte "borderen"*/
+ul.navbar a {
+  text-decoration: none }
+a:link {
+  color: blue }
+a:visited {
+  color: purple }
+  /* Fargen på en link og en besøkt link */
+address {
+  margin-top: 1em;
+  padding-top: 1em;
+  border-top: thin dotted }
+  /* Dette er altså spesifikasjonene til "address", thin dottet er linjen som vises*/
