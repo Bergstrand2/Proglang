@@ -12,4 +12,10 @@ LAB1
    
 LAB2
 
-I mitt tilfelle er jeg brukeren, og jeg kontrollerer forskjellig input til datamaskinen, altså mus og tastatur. PCen tolker det jeg gjør i sin modell, som er realiteten all koding. Deretter prosesseres all koding av maskinen, som så gir meg output på skjermen.
+I mitt tilfelle er jeg brukeren, og jeg kontrollerer forskjellig input til datamaskinen, altså mus og tastatur. PCen tolker det jeg gjør i sin modell, som er realiteten all koding. Deretter prosesseres all koding av maskinen, som så gir meg output på skjermen. Output er i dette tilfelle farger, skrifttyper, menyer og så videre.
+
+Referanser:
+
+Wikipedia
+Linker fra Fronter
+Hjelpelærer (thumps up Erik)
