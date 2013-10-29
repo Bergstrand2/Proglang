@@ -1,0 +1,126 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>Lab4 Alfabetisk liste</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="lab4.css" type="text/css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="jquery-1.8.1.js"></script>
+<script src="jquery.scrollTo-1.4.3.1-min.js"></script>
+<script type="text/javascript">
+$(function() {
+	// markere lenken, og rulle til det selekterte elementet i DOM
+	$( ".firstUL li" ).each(function() {
+		$( this ).click(function() { //Fange hendelsen når brukeren klikker på en av bokstavene
+			$( ".firstUL li" ).removeClass( "selected" ); // I utgangspunktet fjern klassen Selected, hvis den finnes
+			$( this ).addClass( "selected" ); // Legg til selected klassen til det elementet du har klikket på
+			elementClick = $( this ).attr( "id" ); // Få tak i den tilsvarende ID, f.eks "a", "b", "c" osv.
+			
+			// Rulle til det selekterte DOM-elementet contet-for X, X - Selektert bokstav
+			$( ".content-container" ).scrollTo($( "#content-for-"+elementClick ), 800);
+			
+			// Endre bakgrunnsfage
+			$( ".content-container div" ).css( {'background-color' : '#ffffff'});
+			$( ".content-container #content-for-"+elementClick ).css( {'background-color' : '#d2e2fc'});
+	
+		});
+	});
+	
+	
+	// Når "tilbake til toppen" blir klikket på må "A" markeres og innholdet må rulles til toppen
+	$( '.return-to-top' ).click(function(){
+		$( ".firstUL li" ).each(function(){
+			$( ".firstUL li" ).removeClass( "selected" ); // fjerner classname "selected"
+		});
+		
+		// Legg til klassen selected til første bokstav i alfabetet
+		$( "#a" ).addClass( "selected" );
+		// Rulle til et element, "A" i dette tilfellet
+		$( ".content-container" ).scrollTo($( "#content-for-a" ), 800);
+		// Sette bakgrunnsfargen til hvit til alle div, og til lyseblått for den selekterte div`en (a i dette tilfellet)
+		$( ".content-container div" ).css( {'background-color':'#ffffff'} );
+		$( ".content-container #content-for-a" ).css( {'background-color':'#d2e2fc'} );
+	 
+	  });
+	
+	});
+
+	</script>
+</head>
+
+<body>
+
+<div id="body-container">
+	<div class="glossary-container">
+		<ul class="firstUL">
+			<li id="a" class="selected">A</li>
+			<li id="b">B</li>
+			<li id="c">C</li>
+			<li id="d">D</li>
+			<!-- flere bokataver kan legges til -->
+		</ul>
+	</div> <!-- lukker alfabetholderen -->
+	
+	<div class="content-container">
+		<!-- A -->
+		<div id="content-for-a" style="background-color:#d2e2fc">
+			<!-- innhold for A -->
+			<dl>
+				<dt>ActionScript</dt>
+					<dd>AtionScript er et programmeringsspråk basert på ECMAScript som blir brukt primært til utvikling av nettsider og programmvare for Adobe Flash- player plattformen, men også i noen databaseapplikasjoner og grunnleggende robotikk. </dd>
+				<dt>AppleScript</dt>
+					<dd>AppleScript er et script-språk laget av Apple inc. og er innebygget i Macintosh operativsystemet siden system 7.</dd>
+				<dt>Assembler</dt>
+					<dd>Assembler (ASM) er en notasjon for et programmeringsspråk som er leselig for mennesker, brukt av en spesifikk maskinarkitektur. Maskinspråk, som i bunn og grunn bare er et mønster av bit (0 eller 1), blir gjort leselig ved å erstatte rådata med symboler kalt mnemonics. Assemblerspråk er 2. generasjons programmeringsverktøy, direkteinntasting av maskinkoder er 1. generasjons verktøy.</dd>
+			</dl>
+			<p class="return-to-top">Tilbake til toppen</p>
+		</div>
+		
+		<div id="content-for-b">
+			<!-- innhold for B -->
+			<dl>
+				<dt>B</dt>
+					<dd>B er et programmeringsspråk som ble utviklet ved AT&T Bell Laboratories i 1969. Språket ble opprinnelig utviklet av Ken Thompson, og ble senere videreutviklet av Thompson og Dennis Ritchie.B var en forenklet versjon av programmeringsspråket BCPL. B ble erstattet av programmeringsspråket C i 1973, og er idag nesten ikke lenger i bruk.</dd>
+				<dt>Basic</dt>
+					<dd>BASIC (akronym for Beginner's All-purpose Symbolic Instruction Code) er et programmeringsspråk som ble utviklet i USA i 1963, av John George Kemeny og Thomas Eugene Kurtz på Dartmouth College, med det mål for øye å gjøre programmering enklere. BASIC er et relativt lettfattelig programmeringsspråk og benytter seg av bestemte engelske ord i sine kommandoer. Eksempler på BASIC-dialekter som brukes i dag er Visual Basic, QBasic, REALBasic, DarkBasic, BlitzBasic, iBasic, Liberty Basic og PureBasic.</dd>
+				<dt>BitC</dt>
+					<dd>BitC er et programmeringsspråk for systemprogrammering som blir utviklet av forskere ved Johns Hopkins University og The EROS Group, LLC, som en del av prosjektet Coyotos. Formålet med BitC var å utvikle støtte for formell, programvarestyrt verifikasjon. BitC er foreløpig under betatesting. Den siste betaversjonen er 0.9.1 fra 17. februar 2006. Språket blir ikke lenger vedlikeholdt.</dd>
+			</dl>
+			<p class="return-to-top">Tilbake til toppen</p>
+		</div>
+		
+		<div id="content-for-c">
+			<!-- innhold for C -->
+			<dl>
+				<dt>C</dt>
+					<dd>C er et høynivå programmeringsspråk. Med dette språket er det mulig å uttrykke seg svært maskinnært til høynivåspråk å være. Til forskjell fra lavnivåspråkene kan C-kode kompileres for de fleste maskiner. Siden en både kan uttrykke seg maskinnært og samtidig enkelt flytte programmer mellom ulike maskiner, kan en si at C inntar et mellomnivå mellom høynivåspråk og lavnivåspråk, som er årsaken til at C av og til kalles et "portabelt assemblerspråk". Språket ble utviklet fra 1969 til 1973 av Dennis Ritchie i forbindelse med implementasjonen av Unix, og er så anvendelig at det brukes til de fleste oppgaver. Mange andre språk har en syntaks som ligner på C, slik som Perl og Java, men oppbyggingen av disse språkene er annerledes. Direkte etterfølgere av C er Objective-C og C++.</dd>
+				<dt>C++</dt>
+					<dd>C++ er et populært høynivå programmeringsspråk som er en utvidelse av språket C. C++ ble opprinnelig kalt «C with Classes» og ble utviklet og implementert av dansken Bjarne Stroustrup omkring 1983–85, som da jobbet for AT&T Bell Labs. C++ er et multiparadigmespråk, med støtte for funksjonell programmering, objektorientert programmering (OOP), dataabstraksjon og generisk programmering. Populariteten skyldes både at det bygger på C og at det er implementert for de fleste operativsystem.</dd>
+				<dt>COMAL</dt>
+					<dd>COMAL (COMmon Algorithmic Language) er et programmeringsspråk utviklet i Danmark av Benedict Løfstedt og Børge Christensen i 1973. COMAL var laget som en blanding av rådende programmeringsspråk innen utdanning på den tiden, BASIC og Pascal. Det var ment for å brukes til å introdusere elementer fra strukturert programmering i et miljø hvor BASIC ble normalt brukt. "COMAL 80 PROGRAMMING LANGUAGE REPORT" inneholder den formelle definisjonen for språket. På første del av 1980-tallet vant Apple en kontrakt som lot dem selge Apple II-maskiner som kjørte CP/M og COMAL til irske ungdomsskoler.</dd>
+			
+			</dl>
+			<p class="return-to-top">Tilbake til toppen</p>
+		</div>
+		
+		<div id="content-for-d">
+			<!-- innhold for D -->
+			<dl>
+				<dt>D</dt>
+					<dd>D er et programmeringsspråk utviklet av Walter Bright. Det tar mål av seg til å kombinere ytelse og fleksibillitet fra språk som C og C++, med høynivåfunksjonalitet og programmerervennlighet fra språk som Ruby og Python. D er et multiparadigmespråk, og har egne primitiver for å støtte både imperativ, funksjonell, generisk og objektorientert programmering.[1] Språket bruker en syntaks som er svært lik den som brukes i C, C++, Java og C#.</dd>
+				<dt>Delphi</dt>
+					<dd>Delphi er et programvareutviklingsmiljø (Integrated Development Environment (IDE)) basert på programmeringsspråket Pascal. Grunnlaget var det særdeles populære verktøyet Turbo Pascal for PC med en effektiv kompilator utviklet under ledelse av Anders Hejlsberg. Borland Software Inc. utviklet en objektbasert utvidelse kalt Object Pascal som de i neste runde tilpasset for bruk mot Windows («Objekt Pascal for Windows»). De neste versjonene ble lansert under navnet Delphi. Lenge kunne Delphi kun generere applikasjoner for Windows, men nå finnes også varianter som genererer for Linux (hvor kompilatoren kalles Kylix) og web-applikasjoner for .NET- og PHP-rammeverkene. Delphi hører inn under verktøyfamilien CodeGear som nylig ble solgt fra Borland til Embarcadero Technologies, Inc.</dd>
+			</dl>
+			<p class="return-to-top">Tilbake til toppen</p>
+		</div>
+		
+		
+		
+</div> <!-- lukker body-container
+
+<!-- signatur og dato -->
+<br><adress> Fullført på overtid 28. oktober<br>
+av Gunnar</adress>
+
+</body>
+
+</html>
