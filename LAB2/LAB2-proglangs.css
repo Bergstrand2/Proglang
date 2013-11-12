@@ -5,8 +5,8 @@ body {
   font-family: Georgia, "Times New Roman",
         Times, serif;
 		/*Her defineres skrifttypen*/
-  color: red;
-  background-color: blue }
+  color: blue;
+  background-color: white }
   /*Dette bestemmer fargen på skriften og bakgrunnen*/
 ul.navbar {
   list-style-type: none;
@@ -22,7 +22,7 @@ h1 {
         SunSans-Regular, sans-serif }
 		/* Dette er skrifttypen til h1*/
 ul.navbar li {
-  background: white;
+  background: grey;
   margin: 0.5em 0;
   padding: 0.3em;
   border-right: 1em solid black }
@@ -30,9 +30,9 @@ ul.navbar li {
 ul.navbar a {
   text-decoration: none }
 a:link {
-  color: green }
+  color: blue }
 a:visited {
-  color: orange }
+  color: purple }
   /* Fargen på en link og en besøkt link */
 address {
   margin-top: 1em;
